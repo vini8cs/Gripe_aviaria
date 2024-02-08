@@ -1,0 +1,5 @@
+#Number of threads (str)
+threads : "40"
+
+#sample list path:
+sample_file : "samples.tsv"
