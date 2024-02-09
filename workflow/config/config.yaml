@@ -1,0 +1,8 @@
+#Number of threads (str)
+threads : "40"
+
+#sample list path:
+sample_file : "samples.tsv"
+
+#Path to the directory : /home/user/results)
+output_dir : "/home/apis/teste_gripe_aviaria"
