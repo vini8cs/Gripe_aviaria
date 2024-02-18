@@ -88,29 +88,54 @@ def run_bwa(fastq1, fastq2, genome, threads):
         print(f"The command used was: {command}")
         subprocess.run(bwa_index, check=True)
 
-    bwa_aln = ["bwa", "aln", "-t", threads, genome]
-
-    for j, i in zip(["-1", "-2"], [fastq1, fastq2]):
-
-        bwa_aln.extend([j, i, "-f", f"{i}.sai"])
-        command = " ".join(bwa_aln)
-        print(f"The command used was: {command}")
-        subprocess.run(bwa_aln, check=True)
-        bwa_aln = bwa_aln[:-4]
-
-    bwa_sampe = [
+    bwa_mem = [
         "bwa",
-        "sampe",
+        "mem",
+        "-t",
+        threads,
         genome,
-        f"{fastq1}.sai",
-        f"{fastq2}.sai",
         fastq1,
         fastq2,
+        "-o"
+        f"{fastq1}.sam"
     ]
 
-    command = " ".join(bwa_sampe)
+    command = " ".join(bwa_mem)
     print(f"The command used was: {command}")
-    with open(f"{fastq1}.sam") as output_file:
-        subprocess.run(bwa_sampe, check=True, stdout=output_file)
+    subprocess.run(bwa_mem, check=True)
 
-    return f"{fastq1}.sam"
+    samtools_view = [
+        "samtools",
+        "view",
+        "-S",
+        "-b",
+        "--threads",
+        threads,
+        f"{fastq1}.sam",
+        "-o"
+        f"{fastq1}.bam"
+    ]
+    command = " ".join(samtools_view)
+    print(f"The command used was: {command}")
+    subprocess.run(samtools_view, check=True)
+
+    samtools_fastq = [
+        "samtools",
+        "fastq",
+        "-f",
+        "4",
+        f"{fastq1}.bam",
+        "-1",
+        f"{fastq1}.unaligned.fastq",
+        "-2",
+        f"{fastq2}.unaligned.fastq",
+        "--threads",
+        threads
+    ]
+    command = " ".join(samtools_fastq)
+    print(f"The command used was: {command}")
+    subprocess.run(samtools_fastq, check=True)
+
+    return f"{fastq1}.unaligned.fastq", f"{fastq2}.unaligned.fastq"
+
+
