@@ -3,7 +3,7 @@
 import subprocess
 import os
 import argparse
-from Bio import Entrez, SeqIO
+
 
 
 ##########################################
@@ -11,72 +11,50 @@ from Bio import Entrez, SeqIO
 ##########################################
 
 
-# def get_options() -> argparse.Namespace:
-#     """
-#     Parse command line arguments and return the options.
+def get_options() -> argparse.Namespace:
+    """
+    Parse command line arguments and return the options.
 
-#     Returns:
-#         argparse.Namespace: An object containing the parsed command line options.
-#     """
-#     parser = argparse.ArgumentParser(description="Trim Fastq files")
-#     parser.add_argument(
-#         "-s",
-#         "--sample",
-#         help="SRA accession",
-#         default="",
-#         required=True,
-#     )
-#     parser.add_argument(
-#         "-d",
-#         "--directory_path",
-#         help="Directory path where all data will be stored",
-#         default="",
-#         required=True,
-#     )
-#     parser.add_argument(
-#         "-t",
-#         "--threads",
-#         type=str,
-#         help="Number of threads",
-#         default=1,
-#         required=False,
-#     )
-#     parser.add_argument(
-#         "-in1",
-#         "--input1",
-#         type=str,
-#         help="",
-#         default="Foward (R1) input paired-end fastq.gz",
-#         required=True,
-#     )
-#     parser.add_argument(
-#         "-in2",
-#         "--input2",
-#         type=str,
-#         help="",
-#         default="Reverse (R2) input paired-end fastq.gz",
-#         required=True,
-#     )
-#     parser.add_argument(
-#         "-out1",
-#         "--output1",
-#         type=str,
-#         help="",
-#         default="Foward (R1) output filtered paired-end fastq",
-#         required=True,
-#     )
-#     parser.add_argument(
-#         "-out2",
-#         "--output2",
-#         type=str,
-#         help="",
-#         default="Reverse (R2) output filtered paired-end fastq",
-#         required=True,
-#     )
+    Returns:
+        argparse.Namespace: An object containing the parsed command line options.
+    """
+    parser = argparse.ArgumentParser(description="Remove reads from the host")
+    parser.add_argument(
+        "-t",
+        "--threads",
+        type=str,
+        help="Number of threads",
+        default=1,
+        required=False,
+    )
+    parser.add_argument(
+        "-g",
+        "--genome",
+        type=str,
+        help="Host genome for mapping",
+        default="",
+        required=True,
+    )
+    parser.add_argument(
+        "-in1",
+        "--input1",
+        type=str,
+        help="",
+        default="Foward (R1) input paired-end fastq.gz",
+        required=True,
+    )
+    parser.add_argument(
+        "-in2",
+        "--input2",
+        type=str,
+        help="",
+        default="Reverse (R2) input paired-end fastq.gz",
+        required=True,
+    )
 
-#     options = parser.parse_args()
+    options = parser.parse_args()
 
-#     return options
+    return options
 
 
 def run_bwa(fastq1, fastq2, genome, threads):
@@ -139,3 +117,7 @@ def run_bwa(fastq1, fastq2, genome, threads):
     return f"{fastq1}.unaligned.fastq", f"{fastq2}.unaligned.fastq"
 
 
+def main():
+
+    options = get_options()
+    run_bwa(options.input1, options.input2, options.genome, options.threads)
