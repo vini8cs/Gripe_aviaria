@@ -40,3 +40,22 @@ rule fastp:
         """ 
     
 
+rule bwa:
+    input:
+        input1 = rules.fastp.output.output1,
+        input2 = rules.fastp.output.output2
+    output:
+        output1 = "{output_dir}/{sample}/{sample}_R1_001.fastq.unaligned.fastq",
+        output2 = "{output_dir}/{sample}/{sample}_R2_001.fastq.unaligned.fastq"
+    params:
+        threads = config['threads'],
+        genome = config['genome']
+    conda:
+        "envs/environment_bwa.yml"
+    log: "{output_dir}/{sample}/logs/{sample}.bwa.log"
+    benchmark:
+        "{output_dir}/{sample}/benchmarks/bwa.{sample}.RawSeq"
+    shell:
+        """
+        python scripts/run_bwa.py --threads {params.threads} --genome {params.genome} --input1 {input.input1} --input2 {input.input2} 2> {log}
+        """ 

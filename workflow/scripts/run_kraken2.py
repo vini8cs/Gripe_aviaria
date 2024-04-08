@@ -5,7 +5,6 @@ import os
 import argparse
 
 
-
 ##########################################
 ## Options and defaults
 ##########################################
@@ -58,7 +57,7 @@ def get_options() -> argparse.Namespace:
 
 
 def run_kraken2(kraken_database, threads, output, sra_id, sra, sra1, sra2):
-    
+
     kraken2 = [
         "--db",
         kraken_database,
@@ -71,11 +70,11 @@ def run_kraken2(kraken_database, threads, output, sra_id, sra, sra1, sra2):
         "--minimum-hit-groups",
         "3",
         "--confidence",
-        "0.1", #https://github.com/DerrickWood/kraken2/issues/265 
+        "0.1",  # https://github.com/DerrickWood/kraken2/issues/265
         "--output",
-        os.path.join(output, f"{sra_id}.kraken2")
-               ]
-    
+        os.path.join(output, f"{sra_id}.kraken2"),
+    ]
+
     if os.path.isfile(sra1):
         kraken2.extend(["paired", sra1, sra2])
     elif os.path.isfile(sra):

@@ -6,3 +6,7 @@ sample_file : "samples.tsv"
 
 #Path to the directory : /home/user/results)
 output_dir : "/home/apis/teste_gripe_aviaria"
+
+#Path to the reference genome:
+
+genome : "/home/apis/Gripe_aviaria/workflow/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b_genomic.fna"
