@@ -63,7 +63,7 @@ def run_kraken2(kraken_database, threads, output, sra_id, sra, sra1, sra2):
         "--db",
         kraken_database,
         "--threads",
-        "ah, não sei po qkedfnmje",
+        "gdfgdhdh",
         threads,
         "--report",
         os.path.join(output, "metagenomics.k2report"),
