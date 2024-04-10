@@ -11,3 +11,5 @@
 
 #commit 814924a2a88766c18f52dbcd10c0d1392e973464 (HEAD -> main, origin/main) #HEAD -> commit que estamos, origin/main (nosso branch no github remoto)
 #git diff hash_antigo..has_maisnovo #ver a diferença entre dois commits
+
+#teste
