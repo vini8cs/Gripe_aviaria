@@ -9,5 +9,15 @@
 #git show <hash> #mostra mais informações do que foi feito para hash de commit específico
 
 
-#commit 814924a2a88766c18f52dbcd10c0d1392e973464 (HEAD -> main, origin/main) #HEAD -> commit que estamos, origin/main (nosso branch no github remoto)
+#commit 814924a2a88766c18f52dbcd10c0d1392e973464 (HEAD -> main, origin/main) #HEAD -> commit que estamos (se vc usa commit add e commit -m, o HEAD já vai ficar desalinhado do origin/main até vc dar um git push), origin/main (nosso branch no github remoto)
 #git diff hash_antigo..has_maisnovo #ver a diferença entre dois commits
+
+#Caso vc esteja fazendo alterações junto com outras pessoas, vc vai ter um poblema quando for dar git push origin/main. Por isso que é importante sempre faze rum git pull antes
+#Mas isso pode complicar bastante caso vc tenha muita gente trabalhando no mesmo código
+#Por isso, o mehor é fazer ramificações
+
+#criar uma branch nova:
+#git branch <nome_branch>
+
+#para trocar de branch
+#git checkout <nome_branch>
