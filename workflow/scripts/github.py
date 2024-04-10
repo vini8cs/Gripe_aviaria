@@ -21,3 +21,8 @@
 
 #para trocar de branch
 #git checkout <nome_branch>
+
+#você também pode criar uma nova branch e trocar para ela com:
+#git switch -c <novo_branch>
+#se for só para trocar
+#git swtich <novo_branch>
