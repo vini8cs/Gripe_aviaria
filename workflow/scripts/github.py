@@ -26,3 +26,9 @@
 #git switch -c <novo_branch>
 #se for só para trocar
 #git swtich <novo_branch>
+
+#no final é só criar um novo branch no github:
+#git push origin <novo_branch>
+
+#modificar o commit mais recente
+#git commit --amend -m "comentário novo"
