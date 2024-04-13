@@ -31,4 +31,4 @@
 
 #modificar o commit mais recente
 #git commit --amend -m "comentário novo"
->>>>>>> luiza
+
