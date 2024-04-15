@@ -32,3 +32,4 @@
 #modificar o commit mais recente
 #git commit --amend -m "comentário novo"
 
+#vai se fuider
