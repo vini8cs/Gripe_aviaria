@@ -32,4 +32,8 @@
 #modificar o commit mais recente
 #git commit --amend -m "comentário novo"
 
-#vai se fuider
+#remover branch do local:
+#git branch -d <branch>
+
+#excluir branch do repositório remoto:
+#git push origin :<branch>
