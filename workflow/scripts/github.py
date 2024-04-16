@@ -39,3 +39,7 @@
 #git push origin :<branch>
 
 #utilizando git rebase main, é possivel adicionar os commits do outro branch um a um ao branch main, fazer merges e ir resolvendo os conflitos
+
+#depois vc pode voltar pro main e faze rum merge com o outro branch:
+
+#git merge <novo branch>
