@@ -37,3 +37,5 @@
 
 #excluir branch do repositório remoto:
 #git push origin :<branch>
+
+#utilizando git rebase main, é possivel adicionar os commits do outro branch um a um ao branch main, fazer merges e ir resolvendo os conflitos
