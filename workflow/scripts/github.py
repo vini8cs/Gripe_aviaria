@@ -75,3 +75,18 @@
 #undo a commit
 #git reset HEAD~N (N é número de commits vc quer desfazer)
 
+##GIT RESTORE###
+#antes de fazer um commit, é possível desfazer todas as modificações já feitas sem ter que ficar dando cltr+z em todos os arquivos
+#para isso, usa-se
+#git restore <nome do arquivo>
+#por padrão, ele vai restaurar até HEAD ou o último commit 
+
+
+#você também pode desfaze rum git add:
+#git restore --staged <nome do arquivo>
+
+#é possível também retornar a um hash específico utilizando:
+#git restore --source=<hash do commit> <nome do arquivo>
+
+#e caso queira voltar para o atual:
+#git restore --source=HEAD <nome do arquivo>
