@@ -90,3 +90,19 @@
 
 #e caso queira voltar para o atual:
 #git restore --source=HEAD <nome do arquivo>
+
+###GIT TAG####
+
+#para criar uma versão do seu código é possível criar uma tag
+#git tag <nome_da_tag> (ex. v.0.1.0) <hash do commit> (ex. pode ser HEAD também)
+
+#para enviar tag ao repositório:
+#git push origin <nome da tag>
+#ou pegar todas as tags:
+#git push origin --tags 
+
+#para deletar uma tag no repositório local:
+#git tag -d <nome da tag>
+
+#para fazer uma tag com anotação:
+#git tag -a <nome da tag> -m "Mensagem" <hash do commit>
