@@ -106,3 +106,15 @@
 
 #para fazer uma tag com anotação:
 #git tag -a <nome da tag> -m "Mensagem" <hash do commit>
+
+###GIT CHERRY-PICK#####
+
+#É possível ir para uma branch e puxar o commit específico de outra branch:
+#git branch <branch onde vc quer colocar o commit>
+#git cherry-pick <hash do commit>
+
+####GIT BLAME#####
+
+#para checar informações sobre um commit em um arquivo, como autor, data, horário, entre outras informações, você pode utilizar:
+#git blame <nome do arquivo>
+#ele vai dar as informações dos commits de cada linha, com informações completas sobre cada commit para cada linha daquele arquivo

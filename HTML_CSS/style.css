@@ -1,0 +1,27 @@
+body {
+    background-color: #000000; /* cor de fundo */
+    color: #F6F6F6; /*cor do texto */
+}
+p {
+    color: #F6F6F6;
+}
+h1{
+    font-weight: bold; /* Texto em negrito */
+}
+strong {
+    color: #22D4FD;
+}
+span{
+    color: #22D4FD; 
+    border: 1px solid #22D4FD; /* Borda com 1 px de largura, do tipo sólida e cor da borda azul */
+    padding: 10px; /* Espaçamento interno de 10px */
+}
+a{
+    color: #000000;
+    border: 1px solid #22D4FD;
+    background: #22D4FD;
+    padding: 10px;
+
+}
+
+/* criar paletas: https://color.adobe.com/pt/create/color-wheel/*
