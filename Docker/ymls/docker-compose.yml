@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  mongodb: #definir o nome do serviço
+    image: mongo:4.4.6  #definir a imagem que vai ser utilziado
+    container_name: meu-mongo #denifir nome
+    networks:
+      - compose-bridge #rede que quer utilizar
+  
+  alurabooks:
+    image: aluradocker/alura-books:1.0
+    container_name: alurabooks
+    networks:
+      - compose-bridge
+    
+    ports:
+      - 3000:3000 #definindo a porta onde aluraboos vai rodar
+
+    depends_on: #expressa dependência entre serviços
+      -  mongodb
+
+networks: #criando a nossa network compose-bridge 
+  compose-bridge:
+    driver: bridge
