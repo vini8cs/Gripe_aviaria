@@ -10,4 +10,6 @@ Você vai poder também selecionar a região e as zonas de disponibilidade, que 
 
 Você escolhe também o sistema operacional, tamanho (memória ram, threads)
 
-Coloque autenticação por senha e porta de entrada SSH, além do tamanho 
+Coloque autenticação por senha e porta de entrada SSH, além do tamanho da memória interna.
+
+As tags ou marcas são as organizações dos recursos. É importante demarcar cada recurso
