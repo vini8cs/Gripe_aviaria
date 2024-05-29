@@ -25,3 +25,6 @@ Geralmente cria um tag para seu storage
 
 O demais itens podem ser deixados no default ou precisa dar uma pesquisada
 
+Dentro do storage:
+
+- É possível criar Containers (que são tipos diretórios ). O acesso pode ser privado, anônimo e lá dentro pode fazer upload dos arquivos. 
