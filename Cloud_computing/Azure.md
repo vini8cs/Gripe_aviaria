@@ -17,6 +17,28 @@ Coloque autenticação por senha e porta de entrada SSH, além do tamanho da mem
 
 As tags ou marcas são as organizações dos recursos. É importante demarcar cada recurso
 
+## Storage
+
+Repositório (Bucket): É como se fosse um google drive, um repositório onde vc pode mandar e guardar seus arquivos.
+
+Na amazon: S3;
+Na Azure: Blobs;
+Na Google: Cloud Storage
+
+Disco: Outra forma de armazenamento, um HD virutal que está ligado às VMs.
+
+Na amazon: EBS;
+Na Azure: Managed Disk;
+Na Google: Persistent disk
+
+File share: famoso compartilhamento de arquivos para que as máquinas encontrem os arquivos em um único local
+
+Na amazon: EFS;
+Na Azure: Files;
+Na Google: Filestone
+
+Os buckets podem ter classes de armazenamento, que determinam o quanto esses buckets estão disponíveis. Na Azure, são Hot, Cool ou Archive, sendo que no Hot os arquivos estão sempre disponíveis e ni Archive geralmente eles ficam 180 dias armazenados.
+
 # Azure Blob Storage
 
 A redundância na hora de criar um storage account define como o storage deve agir quando tiver um problema em uma região, mudando de regiao ou não.
