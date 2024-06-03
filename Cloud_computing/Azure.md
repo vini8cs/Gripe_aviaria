@@ -37,7 +37,7 @@ Na amazon: EFS;
 Na Azure: Files;
 Na Google: Filestone
 
-Os buckets podem ter classes de armazenamento, que determinam o quanto esses buckets estão disponíveis. Na Azure, são Hot, Cool ou Archive, sendo que no Hot os arquivos estão sempre disponíveis e ni Archive geralmente eles ficam 180 dias armazenados.
+Os buckets podem ter classes de armazenamento, que determinam o quanto esses buckets estão disponíveis. Na Azure, são Hot, Cool ou Archive, sendo que no Hot os arquivos estão sempre disponíveis e no Archive geralmente eles ficam 180 dias armazenados.
 
 # Azure Blob Storage
 
@@ -50,3 +50,13 @@ O demais itens podem ser deixados no default ou precisa dar uma pesquisada
 Dentro do storage:
 
 - É possível criar Containers (que são tipos diretórios ). O acesso pode ser privado, anônimo e lá dentro pode fazer upload dos arquivos. 
+
+# File Share
+
+Vai em "storage accounts" e "File share". Crie um novo file share e vc vai ver as possíveis classes de compartilharmento, que incluem Hot, Cool, Transaction Optimizedm Premium, que indicam quanto tempo os bucktes ficarão disponíveis. 
+
+Nessa File Share vc consegue fazer upload dos seus arquivos, assim como você faria num container. A diferença é que você pode conectar posteriormente o container (file share) a uma máquina virtual Linux, Windows ou Mac e, desta forma, vc tem acesso direto aos arquivos. 
+
+Isso é possível fazendo o "Upload" primeiramente e depois usando o comando "Connect"
+
+O SMB Azure é um serviço do Azure que oferece compartilhamentos de arquivos de forma gerenciada. Os compartilhamentos podem ser acessados por meio de SMB, NFS ou APIs REST. Podem ser acessados através dos sistemas operacionais Linux, Windows e macOS.
