@@ -1,4 +1,8 @@
 
+# [Cloud computing](https://www.alura.com.br/artigos/microsoft-azure-ferramenta-servicos-de-nuvem?utm_source=gnarus&utm_medium=timeline&_gl=1*1ercax*_ga*MTUxMzQyMjU1LjE3MTA3NzUzODM.*_ga_1EPWSW3PCS*MTcxNzQ1NTkxNC4xMDIuMS4xNzE3NDU2MjA5LjAuMC4w)
+
+Aqui tem uma boa explicação sobre Azure e cloud computing
+
 # Máquina virtual
 
 Para poder criar uma máquina virtual, a página consiste em:
