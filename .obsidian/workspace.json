@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "572a573c2402045c",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.3"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -146,7 +157,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c27eb91aba37437a",
+  "active": "572a573c2402045c",
   "lastOpenFiles": [
     "Docker/app-exemplo/node_modules/accepts/README.md",
     "Cloud_computing/Azure.md",
