@@ -1,3 +1,5 @@
+Primeiramente instale P
+
 
 O Poetry já cria uma estrutura automática para nosso preto
 
@@ -17,3 +19,10 @@ A estrututa fica:
 
 ```
 
+Entre no diretório:
+
+```bash
+cd fast_zero
+```
+
+E agora vamos utilizar o py
