@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "b6836ca2914a6679",
@@ -159,7 +160,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "af8af09db6c1815b",
+  "active": "24038547cf306082",
   "lastOpenFiles": [
     "FastAPI/FastAPI.md",
     "FastAPI",
