@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cloud_computing/Azure.md",
+                "file": "FastAPI/FastAPI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Cloud_computing/Azure.md",
+                "file": "FastAPI/FastAPI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Cloud_computing/Azure.md"
+                "file": "FastAPI/FastAPI.md"
               }
             }
           }
@@ -160,12 +160,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "24038547cf306082",
+  "active": "af8af09db6c1815b",
   "lastOpenFiles": [
+    "Cloud_computing/Azure.md",
     "FastAPI/FastAPI.md",
     "FastAPI",
     "Docker/app-exemplo/node_modules/accepts/README.md",
-    "Cloud_computing/Azure.md",
     "Cloud_computing",
     "HTML_CSS/Imagem.png",
     "HTML_CSS/html.png",

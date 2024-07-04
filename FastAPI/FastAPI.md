@@ -1,4 +1,4 @@
-## Configurando o ambiente
+## Configurando o ambiente no seu note
 
 Primeiramente instale Pyenv e Poetry (Pode ver no vídeo: https://www.youtube.com/watch?v=-Pi5AmOfL2s&t=1587s)
 
@@ -60,4 +60,6 @@ E agora vamos utilizar o pyenv com a versão do python que o pyenv baixou. No no
 pyenv local 3.12.4
 ```
 
+##Criando o ambiente
 
+No diretório onde estiver nosso pyproject.toml. vamos faz
