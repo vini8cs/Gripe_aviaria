@@ -33,7 +33,7 @@ Entre no diretório:
 cd fast_zero
 ```
 
-No pyproject.toml, é preciso trocar a versão para `^3.12.*`:
+No pyproject.toml, é preciso trocar a versão para `3.12.*`:
 
 ```bash
   GNU nano 6.2                pyproject.toml                          
@@ -45,7 +45,7 @@ authors = ["Vinícius <vini8cs@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12.*"
+python = "3.12.*"
 
 
 [build-system]
@@ -60,6 +60,16 @@ E agora vamos utilizar o pyenv com a versão do python que o pyenv baixou. No no
 pyenv local 3.12.4
 ```
 
-##Criando o ambiente
+## Criando o ambiente
 
-No diretório onde estiver nosso pyproject.toml. vamos faz
+No diretório onde estiver nosso pyproject.toml. vamos fazer o próximo passo:
+
+```bash
+poetry install
+```
+
+Como instalar o FastAPI usando o poetry:
+
+```bash
+poetry add fastapi
+```
