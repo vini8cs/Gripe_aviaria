@@ -1,3 +1,5 @@
+## Configurando o ambiente
+
 Primeiramente instale Pyenv e Poetry (Pode ver no vídeo: https://www.youtube.com/watch?v=-Pi5AmOfL2s&t=1587s)
 
 Vamos instalar o python 12 com o pyenv:
@@ -31,7 +33,7 @@ Entre no diretório:
 cd fast_zero
 ```
 
-No pyproject.toml, é preciso trocar a versão para "^3.12.*":
+No pyproject.toml, é preciso trocar a versão para `^3.12.*`:
 
 ```bash
   GNU nano 6.2                pyproject.toml                          
@@ -52,8 +54,10 @@ build-backend = "poetry.core.masonry.api"
 
 ```
 
-E agora vamos utilizar o pyenv:
+E agora vamos utilizar o pyenv com a versão do python que o pyenv baixou. No nosso caso foi 3.12.4:
 
 ```bash
-pyenv local 3.12
+pyenv local 3.12.4
 ```
+
+
