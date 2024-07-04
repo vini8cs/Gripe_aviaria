@@ -68,8 +68,47 @@ No diretório onde estiver nosso pyproject.toml. vamos fazer o próximo passo:
 poetry install
 ```
 
+## Intalando o FastAPI
+
 Como instalar o FastAPI usando o poetry:
 
 ```bash
 poetry add fastapi
 ```
+
+Agora nosso `pyproject.toml` vai estar atualizado com o fastapi e suas dependências:
+
+```bash
+[tool.poetry]
+
+name = "fast-zero"
+
+version = "0.1.0"
+
+description = ""
+
+authors = ["Vinícius <vini8cs@gmail.com>"]
+
+readme = "README.md"
+
+  
+
+[tool.poetry.dependencies]
+
+python = "3.12.*"
+
+fastapi = "^0.111.0"
+
+  
+  
+
+[build-system]
+
+requires = ["poetry-core"]
+
+build-backend = "poetry.core.masonry.api"
+```
+
+Todas as dependências foram instaladas no arquivo `poetry.lock`
+
+Quando for comitar, o .lock tem sempre que estar junto
