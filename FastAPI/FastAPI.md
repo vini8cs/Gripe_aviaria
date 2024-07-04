@@ -112,3 +112,20 @@ build-backend = "poetry.core.masonry.api"
 Todas as dependências foram instaladas no arquivo `poetry.lock`
 
 Quando for comitar, o .lock tem sempre que estar junto
+
+## Começando com o FastAPI
+
+Agora a primeira coisa que vamos fazer é criar um script em python `app.py`:
+
+```python
+def read_root():
+	return {"message": "Hello Zwardoooo!"}
+```
+
+e executar no terminal de forma interativa:
+
+```bash
+python -i fast_zero/app.py
+```
+
+La dentro, conseguimos chamar o read_root()
